@@ -317,6 +317,14 @@ body {
     }
 }
 
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    height: 90px;
+    gap: 90px;
+}
+
 
 .grid-item {
     display: flex;
@@ -368,7 +376,7 @@ body {
 
 
 
-.gallery {
+.gallery-images {
     display: flex;
     justify-content: center;
     gap: 40px;
