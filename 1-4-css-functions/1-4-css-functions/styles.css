@@ -1,0 +1,235 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(255, 149, 149);
+  color: rgb(39, 39, 39);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 990px;
+  margin: 0 auto;
+}
+
+.container {
+  width: calc(50% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 400px;
+  border: 1px solid #d38080;
+  margin: 4px;
+  flex-direction: column;
+}
+
+.mini-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.hole {
+  width: 30px;
+  height: 30px;
+  background: beige;
+  border-radius: 100%;
+  margin: 8px;
+}
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: beige;
+}
+
+/* ----PERSPECTIVE-SQUARE---- */
+
+.perspective-square {
+  width: 120px;
+  height: 120px;
+  background: beige;
+  border-radius: 32px;
+  animation: float-square alternate-reverse 2s infinite;
+  box-shadow: 8px 8px 16px 8px rgba(81, 33, 71, 0);
+  transform: translate3d(0px, -32px, 0px) rotateX(48deg) rotateZ(44deg);
+}
+
+
+@keyframes float-square {
+  to {
+    transform: rotateX(48deg) rotateZ(44deg);
+    box-shadow: 16px 24px 8px 4px rgba(81, 33, 71, 0.16);
+  }
+}
+
+/* ----Z-SQURES---- */
+
+
+.z-squares {
+  box-shadow: 8px 8px 16px 8px rgba(81, 33, 71, 0);
+  animation: z-square alternate-reverse 2s infinite;
+
+}
+
+@keyframes z-square {
+  to {
+    transform: skewy(40deg);
+    box-shadow: 8px 8px 16px 16px rgba(81, 33, 71, 0.16);
+  }
+}
+
+/* ----ROTATE-SQURE---- */
+
+.rotate-square {
+  animation: rotate 3s infinite;
+  /* animation-direction: normal; */
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+/* ----LOADING---- */
+
+.loading {
+  display: flex;
+}
+
+.dotsload {
+  animation: dotsload 2s ease-in-out infinite;
+}
+
+@keyframes dotsload {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dotsload:nth-child(2) {
+  animation-delay: 400ms;
+}
+
+.dotsload:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+/* ----MINI-BOXES---- */
+
+
+.odd :nth-child(odd) {
+  background: #cc33cc;
+}
+
+.hole_4 :nth-child(4) {
+  background: #cc33cc;
+}
+
+.holes_1_5 :nth-child(-n+5) {
+  background: #cc33cc;
+}
+
+.hole_last :last-child {
+  background: #cc33cc;
+}
+
+/* ----SQUARES RED&BLUE---- */
+
+.squares {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.square--red {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: solid red;
+  position: absolute;
+  animation: rotate 2s infinite;
+  animation-direction: alternate;
+  /* como colocar ao centro? */
+}
+
+.square--blue {
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 149, 149);
+  border: solid blue;
+  position: absolute;
+  animation: rotate 2s infinite;
+  animation-direction: alternate-reverse;
+}
+
+/* ----BOARD---- */
+
+.board {
+  width: 140px;
+  height: 140px;
+  background-color: beige;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transform: skew(-40deg, 15deg) rotateX(40deg);
+  box-shadow: 8px 8px 16px 4px rgba(81, 33, 71, 0.16);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.face {
+  position: absolute;
+  background-color: beige;
+  border: 1px solid beige;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.front {
+  width: 114px;
+  height: 114px;
+
+}
+
+.square {
+  width: 16px;
+  height: 16px;
+
+}
+
+.square:nth-child(even) {
+  background-color: rgb(255, 255, 253);
+}
+
+.square:nth-child(odd) {
+  background-color: rgb(209, 209, 172);
+}
