@@ -1,5 +1,3 @@
-Entrega de trabalhos do módulo HTML-CSS.
+Delivery of HTML-CSS module assignments.
 
-Aqui encontram-se todos os projectos realizados para o primeiro módulo do curso Full-Stack Edit, Html e Css.
-O projecto de avaliação final (com o nome de 2-1-loja),  consiste na construção de uma loja de e-commerce de produtos para lar. O design para este projeto foi fornecido pelo professor, e o desafio era criar a interface utilizando exclusivamente elementos HTML e CSS.
-
+Here are all the projects completed for the first module of the Full-Stack Edit course, HTML, and CSS. The final assessment project (named 2-1-store) involves building an e-commerce store for home products. The design for this project was provided by the professor, and the challenge was to create the interface using only HTML and CSS elements.
